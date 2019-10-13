@@ -1,5 +1,7 @@
 window.onload = function() {
 
+
+//declaring variables
 var wins = 0;
 var loses = 0;
 var totalScore = 0;
@@ -10,7 +12,7 @@ var four;
 var goalNumber;
 
 
-
+//game reset function.  Loads on page load as well as at the end of each game.
 
 function gameReset() {
 
@@ -20,11 +22,13 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min    //The maximum is exclusive and the minimum is inclusive
   };
   
+
+  //added a little extra here for two.  It goes up to 13 instead of 12... wanted to add some humor =)
 function crystalValues() {
-    one = Math.floor(Math.random() * 12 + 1)
-    two = Math.floor(Math.random() * 13 + 1)
-    three = Math.floor(Math.random() * 12 + 1)
-    four = Math.floor(Math.random() * 12 + 1)
+    one = Math.floor(Math.random() * 12) + 1;
+    two = Math.floor(Math.random() * 13) + 1;
+    three = Math.floor(Math.random() * 12) + 1;
+    four = Math.floor(Math.random() * 12) + 1;
 
 }
 
@@ -37,13 +41,10 @@ crystalValues();
 
 }
 
-
-
-
-
-
+//calling the reset function for when the page loads
 gameReset();
 
+//these are here for testing and in case they help you for grading.
 
 console.log("value of one = " + one);
 console.log("value of two = " + two);
@@ -51,17 +52,20 @@ console.log("value of three = " + three);
 console.log("value of four = " + four);
 console.log("This is the Goal Number: " + goalNumber);
 
+//each button (crystal) has it's own function.  The function groups are below.
 
 $("#crystal1").on("click", function() {
     totalScore = totalScore + one;
     $("#totalScoreText").text(totalScore);
     console.log("Total Score is now: " + totalScore);
+    // I put the check score function inside a function with a slight delay.  What was happening without
+    //this was that the page would tell you that you won or lost but the score wouldn't update before the alert.
     setTimeout(function(){
         checkScore();
     }, 100);
      });
 
-
+//added a little extra to this one.
   $("#crystal2" ).click(function() {
     totalScore = totalScore + two;
     $("#totalScoreText").text(totalScore);
@@ -71,6 +75,8 @@ $("#crystal1").on("click", function() {
     }, 100);
     if (two === 13) {
 alert("You have picked up an African Blood Diamond.  The FBI is on it's way you your house. People on social media are already talking about you.  Game Over")
+loses++
+$("#loses").text(loses);
 gameReset();
 
     }
@@ -96,7 +102,7 @@ gameReset();
   });
 
 
-
+//check score function is declared on each button.  This will check if you won or lost, update the game and run the reset script.
 
 function checkScore() {
 
