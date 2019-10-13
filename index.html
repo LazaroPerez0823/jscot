@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/crystal.css">
+    <title>Crystal Game</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Week 3 - Crystal Game</h1>
+        </div>
+    </div>
+
+    <div class="container white">
+        <h2>Instructions</h2>
+        <p>You will be given a random number at the start of the game.</p>
+        <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points you your
+            total score.</p>
+        <p>
+            You win the game by matching your total score to the random goal number. You lose the game if your total
+            score goes above the random number.</p>
+        <p> The value of each crystal is hidden from you. It’s value will be added to the total as you click them.</p>
+        <p>
+            Each time the game starts it will change the value of each crystal as well as the goal number.
+        </p>
+        <p> Good Luck!!
+        </p>
+        <br>
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="goalSection">
+                        <h3>Goal Number: </h3>
+                        <p id="goal">0</p>
+                        <div class="crystalTotal">
+                            <h4>Your Total Score Is:<h4>
+                                    <p id="totalScoreText">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="win-lossSection">
+                        <span>
+                            <h3>Wins: </h3>
+                        </span><span id="wins">0</span>
+                        <p><span>
+                                <h3>Loses: </h3>
+                            </span><span id="loses">0</span>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+
+                        <input type="image" src="assets/images/1.gif" name="c1" class="btTxt submit" id="crystal1" />
+
+                    </div>
+                    <div class="col-sm">
+                        <input type="image" src="assets/images/2.gif" name="c2" class="btTxt submit" id="crystal2" />
+                    </div>
+                    <div class="col-sm">
+                        <input type="image" src="assets/images/3.gif" name="c1" class="btTxt submit" id="crystal3" />
+                    </div>
+                    <div class="col-sm">
+                        <input type="image" src="assets/images/4.gif" name="c1" class="btTxt submit" id="crystal4" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script type="text/javascript" src="assets/javascript/crystal.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>

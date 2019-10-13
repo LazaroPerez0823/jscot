@@ -1,0 +1,59 @@
+.jumbotron {
+
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+
+.goalSection {
+
+    background-color:greenyellow;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+  
+}
+
+.win-lossSection {
+
+background-color: hotpink;
+font-weight: bold;
+border-style: solid;
+border-width: 2px;
+
+}
+
+
+.btTxt {
+
+max-height: 150px;
+
+}
+
+
+
+.crystalTotal {
+
+    background-color: red;
+    font-weight: bold;
+    border-style: solid;
+border-width: 2px;
+
+}
+
+body {
+    background: #ffffff url("../images/crystal_bg.jpg");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   
+ }
+
+
+
+.white {
+
+    background-color: white;
+
+
+}
