@@ -46,18 +46,17 @@ gameReset();
 
 //these are here for testing and in case they help you for grading.
 
-console.log("value of one = " + one);
-console.log("value of two = " + two);
-console.log("value of three = " + three);
-console.log("value of four = " + four);
-console.log("This is the Goal Number: " + goalNumber);
+// console.log("value of one = " + one);
+// console.log("value of two = " + two);
+// console.log("value of three = " + three);
+// console.log("value of four = " + four);
+// console.log("This is the Goal Number: " + goalNumber);
 
 //each button (crystal) has it's own function.  The function groups are below.
 
 $("#crystal1").on("click", function() {
     totalScore = totalScore + one;
     $("#totalScoreText").text(totalScore);
-    console.log("Total Score is now: " + totalScore);
     // I put the check score function inside a function with a slight delay.  What was happening without
     //this was that the page would tell you that you won or lost but the score wouldn't update before the alert.
     setTimeout(function(){
@@ -69,8 +68,7 @@ $("#crystal1").on("click", function() {
   $("#crystal2" ).click(function() {
     totalScore = totalScore + two;
     $("#totalScoreText").text(totalScore);
-    console.log("Total Score is now: " + totalScore);
-    setTimeout(function(){
+      setTimeout(function(){
         checkScore();
     }, 100);
     if (two === 13) {
@@ -86,7 +84,6 @@ gameReset();
   $("#crystal3" ).click(function() {
     totalScore = totalScore + three;
     $("#totalScoreText").text(totalScore);
-    console.log("Total Score is now: " + totalScore);
     setTimeout(function(){
         checkScore();
     }, 100);
@@ -95,7 +92,6 @@ gameReset();
   $("#crystal4" ).click(function() {
     totalScore = totalScore + four;
     $("#totalScoreText").text(totalScore);
-    console.log("Total Score is now: " + totalScore);
     setTimeout(function(){
         checkScore();
     }, 100);
@@ -121,9 +117,6 @@ else if (totalScore > goalNumber) {
     gameReset();
   }
 }
-
-
-
 
 
 

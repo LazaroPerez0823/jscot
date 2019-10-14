@@ -45,7 +45,7 @@ border-width: 2px;
 body {
     background: #ffffff url("../images/crystal_bg.jpg");
    /* background-repeat: no-repeat; */
-   background-size: 100%;
+   /* background-size: 100%; */
    
  }
 
